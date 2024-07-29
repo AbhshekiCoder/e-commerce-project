@@ -1,0 +1,30 @@
+.image{
+    width: 500px;
+}
+.title{
+    width: 400px;
+    border-bottom: solid 2px silver;
+}
+.icon{
+    width: 400px;
+    overflow-x: auto;
+    height: 150px;
+}
+.icon::-webkit-scrollbar {
+    display: none;
+  }
+  .left{
+    margin-left: 370px;
+    border: solid 1px silver;
+    height: 30px;
+    width: 30px;
+  
+  
+  }
+  .right{
+    border: solid 1px rgb(195, 187, 187);
+    height: 30px;
+    width: 30px;
+
+  }
+  
