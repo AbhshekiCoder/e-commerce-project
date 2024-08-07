@@ -19,7 +19,7 @@ app.use(cors(
 ));
 const mongodbConnect = require('./src/config/config');
 const dotenv = require('dotenv');
-dotenv.config()
+dotnv.config()
 
 const stripe = require('stripe')("sk_test_51PauGq2Lcv7rdblxkMWS7M7aqUjmo0G83boutsqjNAvmzmv6TINlj3kvekfAhVjClyYjIWwf19KiSKwHL1Q9qA3P00FqBeVHYb")
 
@@ -294,7 +294,7 @@ app.get('/', (req, res)=>{
 app.get('/Success', (req, res)=>{
    res.send("<h1>sucess<h1>")
 })
-app.listen('https://e-commerce-project-bnjl.vercel.app', ()=>{
+app.listen(5000, ()=>{
  
 }
 
