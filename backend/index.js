@@ -8,7 +8,8 @@ const  session = require('express-session');
 const  bodyParser = require('body-parser');
 const app = express();
 const { MongoClient, ObjectId} = require('mongodb');
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(cors());
 app.use(cors(
  {
  origin: ["https://e-commerce-project-bnjl.vercel.app"],
