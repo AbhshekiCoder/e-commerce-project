@@ -14,7 +14,7 @@ app.use(cors(
  {
  origin: ["https://e-commerce-project-bnjl.vercel.app"],
  methods: ["POST", "GET"],
- Credentials: true
+ credentials: true
 } 
 ));
 const mongodbConnect = require('./src/config/config');
@@ -294,5 +294,8 @@ app.get('/', (req, res)=>{
 app.get('/Success', (req, res)=>{
    res.send("<h1>sucess<h1>")
 })
+app.listen('https://e-commerce-project-bnjl.vercel.app', ()=>{
+ 
+}
 
 
