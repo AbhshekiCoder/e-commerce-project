@@ -56,7 +56,7 @@ const [username, setUserName] = useState();
 /** 
 const btn1 = async()=>{
   console.log('click')
-  await fetch("http://localhost:5000/user").then(res => res.json())
+  await fetch("https://e-commerce-project-utq7.vercel.app/user").then(res => res.json())
   .then(data =>{
     setData(data);
     
@@ -78,7 +78,7 @@ const btn1 = async()=>{
 
 const update = async()=>{
   try{
-    let result = await axios.get("http://localhost:5000/update",
+    let result = await axios.get("https://e-commerce-project-utq7.vercel.app/update",
      
     
       
@@ -122,7 +122,7 @@ var formdata;
       const formData1 = new FormData();
         formData1.append('formdata', formdata);
     
-        let result1 = await axios.post("http://localhost:5000/data", {formdata});
+        let result1 = await axios.post("https://e-commerce-project-utq7.vercel.app/data", {formdata});
      
        setUserName(result1.data);
        console.log(userName)
@@ -167,7 +167,7 @@ var formdata;
         userid : userId
       }
       try{
-        let result = await axios.get("http://localhost:5000/user",body
+        let result = await axios.get("https://e-commerce-project-utq7.vercel.app/user",body
          
         
           
@@ -196,7 +196,7 @@ useEffect(()=>{
 
 useEffect(()=>{
   
-      axios.get("http://localhost:5000/products")
+      axios.get("https://e-commerce-project-utq7.vercel.app/products")
     .then((res)=>{
       
         setProductData(res.data);
@@ -208,7 +208,7 @@ useEffect(()=>{
     //  user_id: userid
    // }
     /** 
-     axios.post('http://localhost:5000/cart_value', body)
+     axios.post('https://e-commerce-project-utq7.vercel.app/cart_value', body)
     .then((result)=>{
       setCart(result.data);
       console.log(result.data);
@@ -220,7 +220,7 @@ useEffect(()=>{
 },[]);
 useEffect(()=>{
   
-    axios.post('http://localhost:5000/deals').then((result)=>{
+    axios.post('https://e-commerce-project-utq7.vercel.app/deals').then((result)=>{
       setDeals(result.data);
       console.log(result.data);
       let obj;
@@ -237,7 +237,7 @@ useEffect(()=>{
     let body = {
       userid : userid
     }
-    axios.post('http://localhost:5000/users', body).then((result)=>{
+    axios.post('https://e-commerce-project-utq7.vercel.app/users', body).then((result)=>{
       setUserName(result.data[0].name);
       
       
