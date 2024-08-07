@@ -14,7 +14,7 @@ app.use(cors(
  {
  origin: ["https://e-commerce-project-bnjl.vercel.app"],
  methods: ["POST", "GET"],
- credentials: true
+ Credentials: true
 } 
 ));
 const mongodbConnect = require('./src/config/config');
@@ -28,7 +28,11 @@ const stripe = require('stripe')("sk_test_51PauGq2Lcv7rdblxkMWS7M7aqUjmo0G83bout
 //app.set("view engine", "ejs");
 //require('dotenv').config();
 mongodbConnect();
- 
+ app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'e-commerce-project-bnjl.vercel.app'); // Replace '*' with your frontend domain
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 
@@ -61,6 +65,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }))
+
 const url = "mongodb+srv://projects:123456ytrewq@cluster0.0qqnloi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
  
 //var multer = require('multer');
