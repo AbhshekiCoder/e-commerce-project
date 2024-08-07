@@ -11,7 +11,7 @@ function Intrested(){
         let body = {
             userid: userid
         }
-        let result =   axios.post('http://localhost:5000/products1', body )
+        let result =   axios.post('https://e-commerce-project-utq7.vercel.app/products1', body )
          .then((result)=>{
             console.log(result.data);
             setProducts(result.data);
