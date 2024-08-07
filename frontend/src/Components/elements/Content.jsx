@@ -83,7 +83,7 @@ useEffect( ()=>{
 
 },[])
  useEffect( ()=>{
-    axios.post('http://localhost:5000/Products_Category' ).then( function (response){
+    axios.post('"https://e-commerce-project-utq7.vercel.app/Products_Category' ).then( function (response){
     console.log(response.data);
     setCategory(response.data);
   },[])
