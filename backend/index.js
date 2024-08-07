@@ -290,7 +290,4 @@ app.get('/Success', (req, res)=>{
    res.send("<h1>sucess<h1>")
 })
 
-const port = process.env.port||5000;
-app.listen("https://e-commerce-project-utq7.vercel.app", ()=>{
-  
-});
+
