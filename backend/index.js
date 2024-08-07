@@ -10,7 +10,7 @@ const app = express();
 const { MongoClient, ObjectId} = require('mongodb');
 app.use(bodyParser.json())
 app.use(cors({
- origin:["https://e-commerce-project-bnjl.vercel.app/"],
+ origin:["https://e-commerce-project-bnjl.vercel.app"],
  methods:["POST", "GET"],
  credentials: true
 } 
