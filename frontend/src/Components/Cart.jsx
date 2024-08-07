@@ -16,7 +16,7 @@ function Cart(){
         let body = {
             userid: userid
         }
-        let result =   axios.post('http://localhost:5000/carts', body )
+        let result =   axios.post('https://e-commerce-project-utq7.vercel.app/carts', body )
         .then((result)=>{
             console.log(result.data);
             setCart(result.data);
@@ -25,7 +25,7 @@ function Cart(){
             
           })
 
-          axios.post('http://localhost:5000/price', body).then((result1)=>{
+          axios.post('https://e-commerce-project-utq7.vercel.app/price', body).then((result1)=>{
             setData(result1.data);
             console.log(data)
           
@@ -47,7 +47,7 @@ function Cart(){
         let body = {
           product: result.data
         }
-        const response = await axios.post("http://localhost:5000/payment", body).then((result1)=>{
+        const response = await axios.post("https://e-commerce-project-utq7.vercel.app/payment", body).then((result1)=>{
           console.log(result1.data);
           stripe.redirectToCheckout({
             sessionId: result1.data.id
