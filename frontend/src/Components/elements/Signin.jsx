@@ -29,7 +29,7 @@ function Signin(){
         }
        // let formData2 = new FormData();
         //formData2.append('email', `${email}`);
-        let result1 = await axios.post("http://localhost:5000/signin", body)
+        let result1 = await axios.post("https://e-commerce-project-utq7.vercel.app/signin", body)
         .then(function (response) {
             // Handle success
             alert(response.data.success);
