@@ -24,7 +24,7 @@ function ShowProduct({title, title1}){
          title: title
       }
 
-      axios.post("http://localhost:5000/product_data", body).then((result)=>{
+      axios.post("https://e-commerce-project-utq7.vercel.app/product_data", body).then((result)=>{
        //  console.log(result.data);
          setProduct(result.data);
          setCategory(result.data[0].category);
@@ -37,7 +37,7 @@ function ShowProduct({title, title1}){
          itemid: result.data[0]._id,
          userid: userid
       }
-       axios.post('http://localhost:5000/items', body).then((result1)=>{
+       axios.post('https://e-commerce-project-utq7.vercel.app/items', body).then((result1)=>{
          if(result1.data.length > 0){
             setNumber(result1.data[0].count)
             setCount(result1.data[0].count);
@@ -62,7 +62,7 @@ function ShowProduct({title, title1}){
          userid: userid
 
        }
-       axios.post('http://localhost:5000/sizes', data).then((result2)=>{
+       axios.post('https://e-commerce-project-utq7.vercel.app/sizes', data).then((result2)=>{
         
         document.getElementById(result2.data[0].size).style.backgroundColor = "green";
         array.push(result2.data[0].size);
@@ -123,7 +123,7 @@ function ShowProduct({title, title1}){
       let body = {
          category: category,
       }
-    let result =   axios.post('http://localhost:5000/related_items', body )
+    let result =   axios.post('https://e-commerce-project-utq7.vercel.app/related_items', body )
      .then((result)=>{
          console.log(result.data);
          setSlide1(result.data);
@@ -243,7 +243,7 @@ function ShowProduct({title, title1}){
          let data = {
             itemid: itemid
          }
-            let result2 =   axios.post('http://localhost:5000/carts1', data )
+            let result2 =   axios.post('https://e-commerce-project-utq7.vercel.app/carts1', data )
             .then((result1)=>{
               
                   console.log(result1.data[0].title);
@@ -255,7 +255,7 @@ function ShowProduct({title, title1}){
                    
                 
                   }
-                  let result =   axios.post('http://localhost:5000/cart', body )
+                  let result =   axios.post('https://e-commerce-project-utq7.vercel.app/cart', body )
                   .then((result)=>{
                       console.log(result.data);
                       
@@ -304,7 +304,7 @@ function ShowProduct({title, title1}){
             userid: userid
        
          }
-         let result =   axios.post('http://localhost:5000/cart_adds', body )
+         let result =   axios.post('https://e-commerce-project-utq7.vercel.app/cart_adds', body )
          .then((result)=>{
              console.log(result.data);
              
@@ -325,7 +325,7 @@ function ShowProduct({title, title1}){
             userid: userid
    
           }
-         axios.post('http://localhost:5000/sizes', data).then((result2)=>{
+         axios.post('https://e-commerce-project-utq7.vercel.app/sizes', data).then((result2)=>{
             console.log(result2.data[0].size);
             document.getElementById(result2.data[0].size).style.backgroundColor = "white";
          
@@ -359,7 +359,7 @@ function ShowProduct({title, title1}){
             itemid: itemid,
             userid: userid
          }
-         let result =   axios.post('http://localhost:5000/size', body )
+         let result =   axios.post('https://e-commerce-project-utq7.vercel.app/size', body )
          .then((result)=>{
             
              
@@ -381,7 +381,7 @@ function ShowProduct({title, title1}){
             itemid: itemid
          }
        
-            let result2 =   axios.post('http://localhost:5000/user_intrested1', data )
+            let result2 =   axios.post('https://e-commerce-project-utq7.vercel.app/user_intrested1', data )
             .then((result1)=>{
               
                   console.log(result1.data[0].title);
@@ -393,7 +393,7 @@ function ShowProduct({title, title1}){
                    
                 
                   }
-                  let result =   axios.post('http://localhost:5000/user_intrested', body )
+                  let result =   axios.post('https://e-commerce-project-utq7.vercel.app/user_intrested', body )
                   .then((result)=>{
                      
             if(result.data.length == 0){
@@ -437,7 +437,7 @@ function ShowProduct({title, title1}){
             itemid: itemid
             
          }
-         let result =   axios.post('http://localhost:5000/user_intrested2', body )
+         let result =   axios.post('https://e-commerce-project-utq7.vercel.app/user_intrested2', body )
          .then((result)=>{
             if(result.data != 0){
                console.log('shghs')
@@ -465,7 +465,7 @@ function ShowProduct({title, title1}){
             userid: userid
 
          }
-         let result =   axios.post('http://localhost:5000/counts', body )
+         let result =   axios.post('https://e-commerce-project-utq7.vercel.app/counts', body )
          .then((result)=>{
             console.log(result.data);
             document.querySelector('.carts ').innerHTML = result.data[0].total;
