@@ -76,7 +76,7 @@ function Signup(){
     //let result1 = await axios.post("http://localhost:5000/register", {formData});
     axios({
       method: 'post',
-      url: 'http://localhost:5000/register', // Replace with your backend API endpoint
+      url: '"https://e-commerce-project-utq7.vercel.app/register', // Replace with your backend API endpoint
       data: body
      
   })
