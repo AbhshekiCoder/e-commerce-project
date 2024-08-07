@@ -9,7 +9,12 @@ const  bodyParser = require('body-parser');
 const app = express();
 const { MongoClient, ObjectId} = require('mongodb');
 app.use(bodyParser.json())
-app.use(cors());
+app.use(cors({
+ origin:["https://deploy-mern-1whq.vercel.app"],
+ methods:["POST", "GET"],
+ credentials: true
+} 
+));
 const mongodbConnect = require('./src/config/config');
 const dotenv = require('dotenv');
 dotenv.config()
